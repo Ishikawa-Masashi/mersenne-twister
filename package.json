@@ -1,0 +1,36 @@
+{
+  "name": "@ishikawa-masashi/mersenne-twister",
+  "version": "0.0.1",
+  "main": "./dist/index.m",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist types",
+    "watch": "tsc -w | vite build --watch",
+    "build": "yarn clean && tsc && vite build",
+    "build:debug": "node --inspect-brk=5858 ./node_modules/.bin/vite build",
+    "publish": "npm publish --access public",
+    "lint": "eslint --fix \"src/**/*.{js,ts}\"",
+    "test": "yarn vitest",
+    "release": "npm publish --access public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^18.11.2",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8",
+    "vitest": "^0.24.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thzt/test-vite-lib"
+  },
+  "files": [
+    "*"
+  ]
+}
